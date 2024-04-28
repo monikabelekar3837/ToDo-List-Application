@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .action-container{
+         display:flex;
+         margin-top: 20px;
+         justify-content: center;
+        }
+        .list-container{
+            background-color: #ffb366;
+            width: 300px;
+            display: block;
+            margin:20px;
+            padding:10px;
+            border-radius: 5px;
+            height:400px;
+        }
+        .todo-item{
+            background-color:#ff471a;
+            padding:5px 20px;
+            border-radius: 30px;
+            color:#fff;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+  <div class="list container"id="list-container">
+    <div class="todo-item"> Tesk1</div>
+    <div class="todo-item"> Tesk2</div>
+    <div class="todo-item"> Tesk3</div>
+    <div class="todo-item"> Tesk4</div>
+    <div class="todo-item"> Tesk5</div>
+    <div class="todo-item"> Tesk6</div>
+    <div class="todo-item"> Tesk7</div>
+
+  </div> 
+  <div class="action-containr">
+<div class="action-container">
+
+  <input type="text" id="input-todo"/>
+  <button onclick="add()">
+    Add
+  </button>
+</div>
+
+  <script>
+    const todolist = []
+
+    function add(){
+    if (inputs.value =="")
+{
+  alert("please Enter Task")
+}
+    
+  
+        const inputElement = document.getElementById('input-todo')
+        todoList.push(inputElement.value)
+        inputElement.value = ""
+        renderToDoList()
+    }
+    function renderToDoList(){
+        const listContainer = document.getElementById('list-container')
+        listContainer.innerHTML = ""
+
+        for(const todoItem of todolist)
+        {
+            listContainer.innerHTML += '<div class="todo-item">${todoItem}
+        <input type="checkbox"/>
+        ${todoItem}
+       </div>';
+        }
+    }
+  </script> 
+</body>
+</html>
